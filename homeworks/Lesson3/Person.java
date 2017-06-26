@@ -2,7 +2,7 @@ package second.homework;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class Person {
+class Person {
 	private String name;
 	private int birthYear;
 	
