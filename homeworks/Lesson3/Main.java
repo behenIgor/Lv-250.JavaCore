@@ -1,16 +1,20 @@
 package second.homework;
 
+import javax.imageio.IIOException;
+
 public class Main {
 
-	public static void main(String[] args) {
-		Person pers1 = new Person("Ruslan",1995);
-		Person pers2 = new Person("Oksana",1994);
-		Person pers3 = new Person("Stepan",1992);
-		Person pers4 = new Person("Olena",1998);
+	public static void main(String[] args) throws IIOException {
+		Person pers1 = new Person();
+		Person pers2 = new Person();
+		Person pers3 = new Person();
+		Person pers4 = new Person();
 		Person pers5 = new Person();
-		pers5.setName("Bogdan");
-		pers5.setBirthYear(2003);
 		
-		pers1.output();
+		pers1.input();
+		pers2.input();
+		pers3.input();
+		pers4.input();
+		pers5.input();
 	}
 }
