@@ -14,7 +14,7 @@ public class Main {
 		
 
 		dogs.add(new Dog(6, "Nick", breedT.getBreedName()));
-		dogs.add(new Dog(8, "Mike", breed.getBreedName()));
+		dogs.add(new Dog(8, "Bob", breed.getBreedName()));
 		dogs.add(new Dog(9, "Bob", breedG.getBreedName()));
 		dogs.add(new Dog(2, "Mike", breedS.getBreedName()));
 
@@ -24,15 +24,12 @@ public class Main {
 		//oldest dog
 		for (Dog dog : dogs) {
 			if(dog.age > max) 
-				max = dog.age;
-			
+				max = dog.age;	
 			//The same name
-			if(name.equals(dog.name))
-				name = dog.name;
-			else 
-				name = dog.name;			
+
+	
 		}	
-		
+
 		System.out.println("The same name " + name);
 		
 		for (Dog dog : dogs) {
