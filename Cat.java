@@ -1,16 +1,17 @@
 
-public class Dog implements Animal {
+public class Cat implements Animal {
 	
 	
 	@Override
 	public String voice() {
-				return "Dog voice";
+			return "Cat voice";
 	}
 
 	@Override
 	public String feed() {
-			return "Dog feet";
+			return "Cat feed";
+	}
+	
 	}
 
-	}
 
