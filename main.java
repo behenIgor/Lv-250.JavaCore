@@ -1,17 +1,16 @@
+package task2;
 
 public class main {
-
 	public static void main(String[] args) {
-	Bird[] b = new Bird[4];
-	b[0] = new Eagle();
-	b[1] = new Swallow();
-	b[2] = new Penguin();
-	b[3] = new Chicken();
+		Employee [] em = new Employee[4]; 
+		em[0] = new ContractEmployee("Oleg", 1243 , 1000);
+		em[1] =new ContractEmployee("Danylo", 1278, 800);
+		em[2] = new SalariedEmployee("Olena", "ks1234", 28, 6){};
+		em[3] = new SalariedEmployee("Mykyta", "bn2145", 15, 8){};
 	
-	for (int i=0; i < b.length; i++){
-		System.out.println(b[i].fly());
+		for (int i=0; i < em.length; i++){
+		System.out.println(em[i]);
 		}
-
 	}
 
 }
