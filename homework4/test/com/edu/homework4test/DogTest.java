@@ -1,4 +1,4 @@
-package homework4;
+package com.edu.homework4test;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
