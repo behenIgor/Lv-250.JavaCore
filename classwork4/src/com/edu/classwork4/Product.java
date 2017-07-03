@@ -5,15 +5,15 @@ public class Product {
 	public static void main(String[] args) {
 		
 		Product product1 = new Product("Car", 5000, 6);
-		Product product2 = new Product("Bicycle", 700, 12);
+		Product product2 = new Product("Bicycle", 710, 12);
 		Product product3 = new Product("Tank", 4000000, 3);
-		Product product4 = new Product("Skateboard", 100, 50);
+		Product product4 = new Product("Skateboard", 110, 50);
 		
-		int maxPrice = Math.max(Math.max(product1.getPrice(), product2.getPrice()), 
-						 Math.max(product3.getPrice(), product4.getPrice()));
+		int maxPrice = comparePrice(comparePrice(product1.getPrice(), product2.getPrice()), 
+				comparePrice(product3.getPrice(), product4.getPrice()));
 		
-		int maxQuantity = Math.max(Math.max(product1.getQuantity(), product2.getQuantity()), 
-				 Math.max(product3.getQuantity(), product4.getQuantity()));
+		int maxQuantity = compareQuantity(compareQuantity(product1.getQuantity(), product2.getQuantity()), 
+				compareQuantity(product3.getQuantity(), product4.getQuantity()));
 		
 		product1.printNameAndQuantity(maxPrice);
 		product2.printNameAndQuantity(maxPrice);
@@ -73,6 +73,21 @@ public class Product {
 			System.out.println(this.name + " has the biggest quantity.");
 		}
 	}
-
 	
+	private static int comparePrice(int price1, int price2) {
+		if (price1 > price2) {
+			return price1;
+		} else {
+			return price2;
+		}
+	}
+	
+	private static int compareQuantity(int quantity1, int quantity2) {
+		if (quantity1 > quantity2) {
+			return quantity2;
+		} else {
+			return quantity2;
+		}
+	}
+
 }
