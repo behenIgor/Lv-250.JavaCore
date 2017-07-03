@@ -4,6 +4,11 @@ public class SalariedEmployee extends Employee {
 
 	private String socialSecurityNumber;
 
+	public SalariedEmployee(String employeeld, double hourlyRate, int numberOfHours, String socialSecurityNumber) {
+		super(employeeld, hourlyRate, numberOfHours);
+		this.socialSecurityNumber = socialSecurityNumber;
+	}
+
 	public String getSocialSecurityNumber() {
 		return socialSecurityNumber;
 	}
@@ -12,11 +17,6 @@ public class SalariedEmployee extends Employee {
 		this.socialSecurityNumber = socialSecurityNumber;
 	}
 
-	public SalariedEmployee(String employeeld, double hourlyRate, int numberOfHours, String socialSecurityNumber) {
-		super(employeeld, hourlyRate, numberOfHours);
-		this.socialSecurityNumber = socialSecurityNumber;
-	}
-	
 	@Override
 	public void displayInfo() {
 		System.out.println("Social Security Number: " + socialSecurityNumber + ", Employee Id =  "

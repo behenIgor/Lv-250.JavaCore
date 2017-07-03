@@ -6,6 +6,18 @@ public class Employee implements CalculatePay {
 	private double hourlyRate;
 	private int numberOfHours;
 
+	public Employee(String employeeld) {
+		super();
+		this.employeeld = employeeld;
+	}
+
+	public Employee(String employeeld, double hourlyRate, int numberOfHours) {
+		super();
+		this.employeeld = employeeld;
+		this.hourlyRate = hourlyRate;
+		this.numberOfHours = numberOfHours;
+	}
+
 	public String getEmployeeld() {
 		return employeeld;
 	}
@@ -30,15 +42,8 @@ public class Employee implements CalculatePay {
 		this.numberOfHours = numberOfHours;
 	}
 
-	public Employee(String employeeld, double hourlyRate, int numberOfHours) {
-		super();
-		this.employeeld = employeeld;
-		this.hourlyRate = hourlyRate;
-		this.numberOfHours = numberOfHours;
-	}
-
 	public double calculatePay() {
-		return hourlyRate * numberOfHours;
+		return  hourlyRate * numberOfHours;
 	}
 
 	void displayInfo() {
