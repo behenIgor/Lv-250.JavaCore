@@ -5,10 +5,12 @@ public class Employee implements CalculatePay {
 	private String employeeld;
 	private double hourlyRate;
 	private int numberOfHours;
+	private double averageSalary;
 
-	public Employee(String employeeld) {
+	public Employee(String employeeld, double averageSalary) {
 		super();
 		this.employeeld = employeeld;
+		this.averageSalary = averageSalary;
 	}
 
 	public Employee(String employeeld, double hourlyRate, int numberOfHours) {
@@ -42,8 +44,16 @@ public class Employee implements CalculatePay {
 		this.numberOfHours = numberOfHours;
 	}
 
+	public double getAverageSalary() {
+		return averageSalary;
+	}
+
+	public void setAverageSalary(double averageSalary) {
+		this.averageSalary = averageSalary;
+	}
+
 	public double calculatePay() {
-		return  hourlyRate * numberOfHours;
+		return hourlyRate * numberOfHours;
 	}
 
 	void displayInfo() {

@@ -3,20 +3,10 @@ package Employee;
 public class ContractEmployee extends Employee {
 
 	private String federalTaxIdmember;
-	double fixedMonthlyPayment;
 	
-	public ContractEmployee(String employeeld, String federalTaxIdmember, double fixedMonthlyPayment) {
-		super(employeeld);
+	public ContractEmployee(String employeeld, String federalTaxIdmember, double averageSalary) {
+		super(employeeld, averageSalary);
 		this.federalTaxIdmember = federalTaxIdmember;
-		this.fixedMonthlyPayment = fixedMonthlyPayment;
-	}
-
-	public double getFixedMonthlyPayment() {
-		return fixedMonthlyPayment;
-	}
-
-	public void setFixedMonthlyPayment(double fixedMonthlyPayment) {
-		this.fixedMonthlyPayment = fixedMonthlyPayment;
 	}
 
 	public String getFederalTaxIdmember() {
@@ -31,7 +21,7 @@ public class ContractEmployee extends Employee {
 	@Override
 	public void displayInfo() {
 		System.out.println("Federal Tax Id member: " + federalTaxIdmember + ", Employee Id =  "
-				+ super.getEmployeeld() + ", \nFixed Monthly Payment = " + fixedMonthlyPayment);
+				+ super.getEmployeeld() + ", \nFixed Monthly Payment = " + super.getAverageSalary());
 	}
 
 }
