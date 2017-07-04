@@ -10,11 +10,11 @@ public class Employee {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		Employee employee[] = new Employee[6];
+		Employee employee[] = new Employee[5];
 		employee[0] = new Employee("Olexander", 1, 5000);
 		employee[1] = new Employee("Andrii", 1, 6000);
-		employee[2] = new Employee("Oleg", 2, 4000);
-		employee[3] = new Employee("Nastia", 2, 6000);
+		employee[2] = new Employee("Nastia", 2, 4500);
+		employee[3] = new Employee("Oleg", 2, 6000);
 		employee[4] = new Employee("Mykhailo", 1, 1500);
 		
 		System.out.println("Enter number of department: ");
