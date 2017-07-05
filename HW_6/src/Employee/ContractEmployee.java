@@ -21,7 +21,7 @@ public class ContractEmployee extends Employee {
 	@Override
 	public void displayInfo() {
 		System.out.println("Federal Tax Id member: " + federalTaxIdmember + ", Employee Id =  "
-				+ super.getEmployeeld() + ", \nFixed Monthly Payment = " + super.getAverageSalary());
+				+ super.getEmployeeld() + ", \nFixed Monthly Payment = " + super.getSalary());
 	}
 
 }

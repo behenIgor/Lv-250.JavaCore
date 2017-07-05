@@ -8,7 +8,7 @@ public class SalariedEmployee extends Employee {
 			String socialSecurityNumber) {
 		super(employeeld, hourlyRate, numberOfHours);
 		this.socialSecurityNumber = socialSecurityNumber;
-		super.setAverageSalary(super.calculatePay());
+		this.setSalary(super.calculatePay());
 	}
 
 	public String getSocialSecurityNumber() {
@@ -23,7 +23,7 @@ public class SalariedEmployee extends Employee {
 	public void displayInfo() {
 		System.out.println("Social Security Number: " + socialSecurityNumber + ", Employee Id =  "
 				+ super.getEmployeeld() + ", \nHourly Rate = " + super.getHourlyRate() + ", Number Of Hours = "
-				+ super.getNumberOfHours() + ", Calculate Pay = " + super.getAverageSalary());
+				+ super.getNumberOfHours() + ", Calculate Pay = " + super.getSalary());
 	}
 
 }
