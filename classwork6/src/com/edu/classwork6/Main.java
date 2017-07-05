@@ -29,13 +29,10 @@ public class Main {
 		System.out.println();
 		
 		for (int i = 0; i < person.length; i++) {
+			System.out.println();
+			person[i].print();
 			if (person[i] instanceof Staff) {
-				System.out.println();
-				person[i].print();
 				System.out.println("My salary is " + ((Staff)person[i]).salary());
-			} else {
-				System.out.println();
-				person[i].print();
 			}
 		}
 		
