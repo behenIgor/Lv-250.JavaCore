@@ -1,4 +1,4 @@
-package new29;
+﻿package new29;
 
 import java.util.Scanner;
 
@@ -14,11 +14,14 @@ public class FiveNumbers {
             num[i] = Integer.parseInt(scanner.nextLine());
         }
 
+        int count = 0;
         for (int i = 0; i < num.length ; i++) {
             if(num[i] >= 0){
-                System.out.println("Position of second positive number is " + (i+1));
-                break;
+               count++;
+               
             }
+            if(count == 2)
+                System.out.println("Position of second positive number is " + (i));
         }
 
         int min = num[0];
