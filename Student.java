@@ -2,16 +2,26 @@ package Task3;
 
 import java.util.Comparator;
 
-public class Student implements Comparator {
-	private static String name = null;
-	static int course;
+public class Student {
+	String name;
+	int course;
+
+	static NameComparator nameComparator = new NameComparator();
+
+	static CourseComparator courseComparator = new CourseComparator();
+
+	public Student(String name, int course) {
+		this.name = name;
+		this.course = course;
+		return;
+	}
 
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
-		Student.name = name;
+		this.name = name;
 	}
 
 	public int getCourse() {
@@ -20,26 +30,26 @@ public class Student implements Comparator {
 
 	public void setCourse(int course) {
 		this.course = course;
-
 	}
 
-	public Student(int course, String name) {
-		this.name = name;
-		this.course = course;
+	public static NameComparator getNameComparator() {
+		return nameComparator;
 	}
 
-	static Student nameComparator = new Student(course, name);
-
-	public static Comparator getNameComparator() {
-		return (Comparator) nameComparator;
+	public static void setNameComparator(NameComparator nameComparator) {
+		Student.nameComparator = nameComparator;
 	}
 
-	public int compare(Object s1, Object s2) {
-		return ((Student) s1).name.compareTo(((Student) s2).name);
+	public static CourseComparator getCourseComparator() {
+		return courseComparator;
+	}
+
+	public static void setCourseComparator(CourseComparator courseComparator) {
+		Student.courseComparator = courseComparator;
 	}
 
 	@Override
 	public String toString() {
-		return "Student name is " + name + ", course is " + course + "\n";
+		return "Student [name=" + name + ", course=" + course + "]";
 	}
 }
