@@ -46,7 +46,7 @@ public class UnionAndIntersection {
 		LinkedHashSet <String> intersection = new LinkedHashSet <String> ();
 		for (String str1 : stringSetOne) {
             for (String str2 : stringSetTwo) {
-                if (str1 == str2) {
+                if (str1.equals(str2)) {
                 	intersection.add(str2);
                 }
             }
